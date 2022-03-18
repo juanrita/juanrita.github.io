@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <title>Actividades Unidad 4: Ejemplo grid2</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Ejemplo grid2">
+        <meta name="keywords" content="actividades">
+        <style>
+            body{
+                display: grid;
+                grid-template-areas: 
+                "header header header"
+                "nav article div"
+                "footer footer footer";
+                grid-template-rows: 20% 1fr 50px;
+                grid-template-columns: 25% 1fr 25%;
+                grid-gap: 5px;
+                height: 100vh;
+                margin: 0;
+            }
+
+            body > header {
+                grid-area: header;
+                background-color: dodgerblue;
+                border: solid 1px;
+                text-align: center;
+            }
+
+            body > nav {
+                grid-area: nav;
+                background-color:rgb(243, 223, 109);
+                border: solid 1px;
+                text-align: center;
+            }
+
+            body > article {
+                grid-area: article;
+                background-color: rgb(243, 223, 109);
+                border: solid 1px;
+                text-align: center;
+            }
+
+            body > div {
+                grid-area: div;
+                background-color: rgb(243, 223, 109);
+                border: solid 1px;
+                text-align: center;
+            }
+
+            body > footer {
+                grid-area: footer;
+                background-color: dodgerblue;
+                border: solid 1px;
+                text-align: center;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <header id="header">Header</header>
+        <article id="article">Article</article>
+        <nav id="nav">Nav</nav>
+        <div id="div">Aside</div>
+        <footer id="footer">Footer</footer>
+    </body>
+</html>
