@@ -1,0 +1,113 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(36, 36, 36);
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+#top {
+    text-align: center;
+    margin: 30px;
+}
+
+#top a{
+    text-decoration: none;
+    color: blue;
+}
+footer {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+#descripcion p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+#descripcion {
+    max-width: 275px;
+    float: left;
+    text-align: justify;
+}
+#webs {
+    display: inline-block;
+}
+#enlaces {
+    float: right;
+    text-align: justify;
+}
+
+footer h3 {
+    font-size: 20px;
+}
+footer a{
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+#copy {
+    padding-top: 20px;
+    border-top: 2px solid black ;
+    text-align: left;
+    border-top: blanchedalmond solid;
+}
+
+img.cordoba{
+    width: 50%;
+    float: left;
+}
+
+h1{
+    font-family: monospace;
+    font-size: 60px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+p.texto{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-top: 20px;
+    
+}
+
+img.redes{
+    float: right;
+}
+
+.img{
+    width: 25%;
+    height: 300px;
+    float :left ;
+}
+
+.articulo_cordoba {
+    margin-top: 300px;
+}
+
