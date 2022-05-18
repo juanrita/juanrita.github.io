@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Pagina de Juan Rafael Pedraza Galvez</title>
+<link rel="alternate" type="text/xml" href="rss2.atom"/>
+<id>https://juanrita.github.io/index.html</id>
+
+<entry>
+    <title>Ejercicios XML</title>
+    <link href="../unidades/unidad7/unidad7.html"/>
+    <id>https://juanrita.github.io/lm/unidades/unidad6/unidad6.html</id>
+    <summary>Aqui encontraras todos los ejercicios xml del modulo.</summary>
+</entry>
+
+<entry>
+    <title>Ejercicios XHTML</title>
+    <link href="../unidades/unidad6/unidad6.html"/>
+    <id>https://juanrita.github.io/lm/unidades/unidad7/unidad7.html</id>
+    <summary>Aqui encontraras todos los ejercicios xhtml del modulo.</summary>
+</entry>
+
+<entry>
+    <title>Ejercicios XSLT</title>
+    <link href="../unidades/unidad9/unidad9.html"/>
+    <id>https://juanrita.github.io/lm/unidades/unidad9/unidad9.html</id>
+    <summary>Aqui encontraras todos los ejercicios xslt del modulo.</summary>
+</entry>
+
+<entry>
+    <title>Ejercicios XQUERY</title>
+    <link href="../unidades/unidad9/unidad9.html"/>
+    <id>https://juanrita.github.io/lm/unidades/unidad10/unidad10.html</id>
+    <summary>Aqui encontraras todos los ejercicios xquery del modulo.</summary>
+</entry>
+</feed>

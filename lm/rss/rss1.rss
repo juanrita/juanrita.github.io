@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+    <title>Juan Rafael Ejercicios html</title>
+    <link>https://juanrita.github.io/</link>
+    <description>Aqui se subiran los ejercicios de html.</description>
+    <copyright>2022 Juan Rafael Pedraza Gálvez.</copyright>
+
+    <item>
+    <title>Córdoba Ciudad Patrimonio</title>
+    <link>https://juanrita.github.io/lm/cp/index.html</link>
+    <description>Esta es la pagina de cordoba ciudad patrimonio donde puedes consultar información sobre diferentes monumentos de Córdoba</description>  
+    </item>
+
+    <item>
+        <title>Las Recetas de la Abuela</title>
+        <link>https://juanrita.github.io/lm/recetas_abuela/index.html</link>
+        <description>Esta es la pagina de las recetas de la abuela aqui puedes ver recetas tradicionales para poder hacerlas.</description> 
+    </item>
+
+    <item>
+        <title>Ejercicios html</title>
+        <link>https://juanrita.github.io/lm/unidades/unidad3/actividades.html</link>
+        <description>Aqui encontraras todos los ejercicios html del modulo.</description> 
+    </item>
+
+    <item>
+        <title>Ejercicios css1</title>
+        <link>https://juanrita.github.io/lm/unidades/unidad4/css/css.html</link>
+        <description>Aqui encontraras todos los ejercicios css1 del modulo.</description> 
+    </item>
+
+    <item>
+        <title>Ejercicios css2</title>
+        <link>https://juanrita.github.io/lm/unidades/unidad5/unidad5.html</link>
+        <description>Aqui encontraras todos los ejercicios css2 del modulo.</description> 
+    </item>
+
+</channel>
+</rss>

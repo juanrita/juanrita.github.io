@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <title>Las Recetas de la Abuela</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Recetas de la Abuela">
+        <meta name="keywords" content="recetas">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            #cabecera{
+                background-color: rgb(253, 241, 173);
+                color: rgb(59, 59, 59);
+            }
+
+            .carousel-inner { text-align: center; }             .carousel .item > img { display: inline-block; }
+
+            #flecha_izquierda {
+                margin-left: 27%;
+                height: 500px;
+            }
+
+            #flecha_derecha {
+                margin-right: 27%;
+                height: 500px;
+            }
+
+            #recetas {
+                text-align: center;
+                background-color: rgb(253, 241, 173);
+            }
+
+            #h2_recetas {
+                text-align: left;
+                font-size: 25px;
+                margin-left: 150px;
+                margin-right: 150px;
+            }
+
+            #texto_recetas{
+                text-align: left;
+                margin-left: 150px;
+                margin-right: 150px;
+            }
+
+            footer {
+                background-color: rgb(253, 241, 173);
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                padding: 30px;
+                color: rgb(59, 59, 59);
+            }
+
+            footer h3 {
+                font-size: 20px;
+            }
+            
+            footer a{
+                text-decoration: none;
+                color: #007bff;
+                font-size: 16px;
+            }
+
+            #copy {
+                padding-top: 20px;
+                border-top: 2px solid black ;
+                text-align: left;
+                border-top: rgb(59, 59, 59) solid;
+                padding-bottom: 45px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id='cabecera' class="jumbotron text-center">
+            <h1>Las Recetas de la Abuela</h1>
+            <p>Juan Rafael Pedraza Gálvez | Álvaro Salado Palomares</p> 
+        </div>
+
+            <div id="demo" class="carousel slide" data-ride="carousel">
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/burguer.jpg" alt="Los Angeles" width="800" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="img/pasta.jpg" alt="Chicago" width="800" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="img/tortitas.jpg" alt="New York" width="800" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="img/pollocurry.jpg" alt="Orlando" width="800" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="img/flamenquines.jpg" alt="Toronto" width="800" height="500">
+              </div>
+              <div class="carousel-item">
+                <img src="img/tarta.jpg" alt="New York" width="800" height="500">
+              </div>
+            </div>
+            
+            <!-- Left and right controls -->
+            <a id="flecha_izquierda" class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a id="flecha_derecha" class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+            <br>
+            <br>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h3>Hamburguesa Clasica</h3>
+                    <p>¿Quieres hacer tus propias hamburguesas caseras, desde el principio, con la mejor carne picada e ingredientes? Sigue la receta con la preparación de la carne, hasta el plato final. El resultado es de autentico gourmet.</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <h3>Tortitas</h3>
+                    <p>Adivina, adivinanza, ¿quién acaba de desayunar tortitas? De paso que me hice el pudin de pan preparé la masa de tortitas y han sido todo un éxito en casa.</p>
+                    <p>No puedo dejar de compartir esta nueva receta de tortitas, muy sencillas y sobre todo, rápidas de preparar, en menos de 20 minutos tienes el desayuno preparado para toda la familia. No hay como una de nuestras recetas de postres para un desayuno o una merienda en familia.</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <h3>Pasta a la Carbonara</h3>        
+                    <p>Los espaguetis a la carbonara es probablemente la forma más internacional de preparar esta pasta. La auténtica salsa carbonara de italia contiene yema de huevo, queso y bacon. No tiene nata, ingrediente que le solemos añadir en España. Incluso hay muchas versiones que tan solo contienen nata. Puedes hacerla así, si quieres pero aquí, haremos unos espaguetis a la carbonara auténticos.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h3>Pollo al curry</h3>
+                    <p>Pollo al curry, una receta exótica que nos traslada a otros lugares como la India y que desde que lo probé en un restaurante y me animé a hacerlo en casa se ha convertido en una de nuestras recetas de pollo favoritas ¡Es un sabor único!</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <h3>Flamenquines caseros</h3>
+                    <p>Los flamenquines cordobeses son una tapa típica andaluza ya que aunque nació en Córdoba se ha ido extendiendo y es que no es para menos, su sencillez y su sabor y textura son buenas razones para ello. Sigue nuestra receta paso a paso para prepararlos muy fácilmente y conseguir un perfecto rebozado por fuera y en su interior un bocado jugoso.</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <h3>Tarta de queso</h3>        
+                    <p>La tarta de queso de Dulcespostres ha sido durante mucho tiempo la receta más popular del blog. Creo que su éxito se debe a que no necesita horno para su elaboración y es una receta de queso muy fácil de hacer y que tiene unos ingredientes muy económicos.</p>
+                  </div>
+                </div>
+              </div>
+
+            <div id="recetas">
+                <h1>Hamburguesa Clasica</h1>
+                <img src="img/hamburguesa.jpg" alt="Los Angeles" width="800" height="500" style="float: right; margin-top: 150px; margin-right: 150px">
+                <p id="texto_recetas">La elaboración de las hamburguesas caseras es muy detallada, partiendo de la carne picada, haciendo la mezcla para la masa, el moldeado de las hamburguesas, el asado o parrilla y la preparación del plata final. Puedes encontrar los detalles a continuación en este receta paso a paso.</p>
+                <h2 id="h2_recetas">INGREDIENTES</h2>
+                <form id="texto_recetas" action="/action_page.php">
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label> 350 g de magro de cerdo picado.</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label> 350 g de ternera picada.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> 1/2 cebolla tierna picada.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> 1 huevo.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> 1 cs de ketchup.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> Sal.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> Pimienta.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> Canónigos o lechuga.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> Tomate laminado.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> Cebolla morada en aros.</label><br><br>
+                  </form>
+                <h2 id="h2_recetas">ELABORACIÓN</h2>
+                <p id="texto_recetas">1. Mezclamos la carne, ponemos un poco de pimienta, sal y movemos bien.</p>
+                <p id="texto_recetas">2. Añadimos un huevo entero.</p>
+                <p id="texto_recetas">3. Añadimos el ketchup y la mostaza.</p>
+                <p id="texto_recetas">4. Por ultimo la media cebolla tierna, bien picadita y mezclamos todo bien.</p>
+                <p id="texto_recetas">5. Hacemos 4 bolas de aproximadamente 200 g.</p>
+                <p id="texto_recetas">6. Ponemos a calentar una asadora a fuego medio – alto, en la mano nos ponemos un poco de aceite de oliva y lo ponemos sobre la hamburguesa. Asamos durante un par de minutos por cada lado hasta que quede dorada.</p>
+                <p id="texto_recetas">7. Preparamos el pan , poniendo bajo los canónigos, el tomate, y sobre estos la hamburguesa asada.</p>
+                <p id="texto_recetas">8. Por último los aros de cebolla morada, y tapamos con el pan, acompañamos con unas patatas fritas.</p>
+                <br>
+                <br>
+                <hr>
+            </div>
+            
+            <div id="recetas">
+                <h1>Tortitas</h1>
+                <img src="img/tortitas_receta.jpg" alt="Los Angeles" width="800" height="500" style="float: right; margin-top: 150px; margin-right: 150px">
+                <p id="texto_recetas">No puedo dejar de compartir esta nueva receta de tortitas, muy sencillas y sobre todo, rápidas de preparar, en menos de 20 minutos tienes el desayuno preparado para toda la familia. No hay como una de nuestras recetas de postres para un desayuno o una merienda en familia.</p>
+                <h2 id="h2_recetas">INGREDIENTES</h2>
+                <form id="texto_recetas" action="/action_page.php">
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label> 150 g de harina de trigo de todo uso.</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label> 2 huevos medianos.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> 25 g de azúcar blanquilla (también vale panela).</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> 50 g de mantequilla.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> 200 ml. de leche entera.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> Unas gotas de esencia de vainilla.</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> 12 g de levadura en polvo (levadura química o polvo de hornear).</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> Una pizca de sal fina (2 gramos).</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label> Para acompañar: Miel, jarabe de Arce, mantequilla, crema de chocolate, Nutella, Nocilla...</label><br>
+                    <br>
+                  </form>
+                <h2 id="h2_recetas">ELABORACIÓN</h2>
+                <p id="texto_recetas">1. En un bol mezclamos los ingredientes secos, la harina, levadura, azúcar y sal. Reservamos.</p>
+                <p id="texto_recetas">2. Combinamos en otro bol los huevos batidos, la mantequilla derretida y la esencia de vainilla. Incorporamos los ingredientes secos y, con una varilla incorporamos a los líquidos.</p>
+                <p id="texto_recetas">3. Vertemos la leche y batimos, es muy importante que no batamos demasiado la mezcla. Se trata de integrarlos pero no es necesario intentar eliminar todos los grumos. Si lo batimos en exceso los pancakes nos quedarán demasiado duros.</p>
+                <p id="texto_recetas">4. Calentamos una sartén (debe ser aquella que tengamos para que no se pegue las cosas, la de las tortillas o cosas a la plancha). </p>
+                <p id="texto_recetas">5. Cuando esté caliente añadimos un cucharón de la mezcla de las tortitas, comenzando a verterlo por el centro y dejando que sea la propia masa la que se redistribuya en la sartén. Es importante que regulemos la temperatura hacia arriba o hacia abajo durante todo el proceso.</p>
+                <p id="texto_recetas">6. Si la masa no se cuaja al añadirla a la sartén estará demasiado fría y si, por el contrario la parte inferior se quema antes de que aparezcan burbujitas en la parte superior, estará demasiado caliente.</p>
+                <p id="texto_recetas">7. Cuando vemos que aparecen burbujas en la parte superior del pancake o tortita es el momento de darle la vuelta con una espátula. Cocinamos el pancake por el otro lado durante 30 o 40 segundos  y retiramos.</p>
+                <p id="texto_recetas">8. Podemos añadir a la masa una vez que la vertemos en la sartén algún tipo de frutas frescas, arándanos, frambuesas, serán perfectas como acompañamiento.</p>
+                <p id="texto_recetas">9. Servimos las tortitas unos encima de otros haciendo una torre, bañados con miel, una merienda de rechupete. Como alternativa podemos sustituir la miel por crema de cacao casera o aquella que más os guste, ¡buenísimas! Incluso pueden ir con un toque de fruta… arándanos, plátano, fresas, cerezas o frambuesas, por ejemplo.</p>
+                <br>
+                <br>
+                <hr>
+            </div>
+
+            <div id="recetas">
+              <h1>Pasta a la Carbonara</h1>
+              <img src="img/pasta_receta.jpg" alt="Los Angeles" width="800" height="500" style="float: right; margin-top: 150px; margin-right: 150px">
+              <p id="texto_recetas">Los espaguetis a la carbonara es probablemente la forma más internacional de preparar esta pasta. La auténtica salsa carbonara de italia contiene yema de huevo, queso y bacon. No tiene nata, ingrediente que le solemos añadir en España. Incluso hay muchas versiones que tan solo contienen nata. Puedes hacerla así, si quieres pero aquí, haremos unos espaguetis a la carbonara auténticos. Y para ello, los ingredientes que necesitaremos serán:</p>
+              <h2 id="h2_recetas">INGREDIENTES</h2>
+              <form id="texto_recetas" action="/action_page.php">
+                  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                  <label> 400g de espagueti.</label><br>
+                  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                  <label> 2 huevos.</label><br>
+                  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                  <label> 150g de queso curado (parmesano, manchego…).</label><br>
+                  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                  <label> 120g de bacon o panceta.</label><br>
+                  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                  <label> sal y pimienta.</label><br>
+                  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                  <label> Un pequeño chorrito de aceite de oliva.</label><br><br>
+                </form>
+              <h2 id="h2_recetas">ELABORACIÓN</h2>
+              <p id="texto_recetas">1. Ponemos un puñadito de sal (generoso) en abundante agua hirviendo. Después añadimos los espagueti y los dejamos cocer aquí alrededor de 10 minutos. hasta que estén al «dente». Conviene removerlos con frecuencia sobre todo al principio de la cocción, para que no se peguen.</p>
+              <p id="texto_recetas">2. Mientras se cuecen preparamos la carbonara. En un bol añadimos las yemas de los huevos. La clara es mejor guardarla para otra elaboración ya que, si la añadimos, parecerá más una tortilla de espaguetis, que una salsa en sí. Pero si no te importa, puedes añadirla. Añadimos también el queso rallado y mezclamos ambos ingredientes con un tenedor. Quedará una especie de masa muy densa y ésta, será la carbonara.</p>
+              <p id="texto_recetas">3. En una sartén ponemos un pequeño chorrito de aceite. Cuando esté bien caliente, añadimos el bacon o la panceta, cortado en dados más bien pequeños. Pasados un par de minutos, cuando estén fritos, retiramos del fuego y reservamos</p>
+              <p id="texto_recetas">4. Una vez hecho esto y cuando los espaguetis estén cocinados, guardamos unos cuantos cucharones del caldo de la cocción. Después escurrimos los espaguetis del resto del caldo</p>
+              <p id="texto_recetas">5. Sin demora, ya que será el propio calor residual de los espagueti los que vayan a cocinar la carbonara, echamos la pasta en el bol donde la habíamos preparado. Añadimos el bacon, con el juguito que hayan podido soltar y un poco del caldo de la cocción. Removemos todo bien con un tenedor para que los espaguetis absorban toda la salsa. Si ves que queda muy densa, puedes añadir más caldo de la cocción, hasta que haya quedado una salsa muy cremosa (no olvides remover enérgicamente todo. La pasta es muy porosa y absorbe las salsa con relativa facilidad. Pero necesita ser removido para ayudar a este proceso)</p>
+              <p id="texto_recetas">6. Finalmente, cuando hayamos conseguido la cremosidad de la salsa deseado, espolvorear con abundante pimienta negra recién molida. Se dice que el nombre «carbonara» viene del color que le da esta especia, que recuerda el color del carbón. Servir inmediatamente</p>
+              <br>
+              <br>
+              <hr>
+          </div>
+
+          <div id="recetas">
+            <h1>Pollo al curry</h1>
+            <img src="img/pollocurry2.jpg" alt="Los Angeles" width="800" height="500" style="float: right; margin-top: 150px; margin-right: 150px">
+            <p id="texto_recetas">Hace tiempo que las recetas de curry dejaron de ser algo exótico en nuestras mesas, y yo que me alegro, pues aunque no sean las elaboraciones fielmente tradicionales de la cocina india nos permiten preparar comidas deliciosas con muy poco tiempo. Con esta receta de pollo al curry en 10 minutos tenemos un plato completo y sabroso listo en un periquete.</p>
+            <h2 id="h2_recetas">INGREDIENTES</h2>
+            <form id="texto_recetas" action="/action_page.php">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label> 2 Pechuga de pollo</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label> Cebolleta</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Jengibre fresco 5g</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Guindilla pequeña</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Curry molido 5g</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Comino molido 2g</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Tomate triturado 45ml</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Sal 2g</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Pimienta negra molida</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Leche de coco</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Aceite de oliva virgen extra</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label> Perejil</label><br><br>
+              </form>
+            <h2 id="h2_recetas">ELABORACIÓN</h2>
+            <p id="texto_recetas">1.Para preparar la receta del pollo al curry lo mejor es empezar troceando el pollo.
+              Coge las pechugas de pollo y límpialas muy bien de restos de huesecillos o grasa que puedan traer.</p>
+            <p id="texto_recetas">2.Una vez limpias, trocéalas en pedacitos de bocado. Mi consejo es que no los dejes demasiado grandes, como mucho en cuadrados de unos 3 centímetros más o menos.
+              Salpimenta la carne.
+              A continuación pon una sartén al fuego con un poquito de aceite. </p>
+            <p id="texto_recetas">3.Con el fuego fuerte, mete los trozos de pechuga y séllalos. Ese paso lo que pretende es hacer la carne por fuera pero que se mantenga jugosa por dentro.
+              Mientras se hace el pollo, pela y trocea una cebolla. Intenta picarla muy pequeñita, tanto como para que no se note en la salsa al final de la cocción.
+              En otra sartén pon un par de cucharadas de aceite y la cebolla. </p>
+            <p id="texto_recetas">4.Deja que se cocinen a fuego bajo durante varios minutos, hasta que veas que se pone transparente.
+              Cuando veas que los trozos de pollo están dorados, retíralos del fuego.
+              Cuando la cebolla esté hecha, pon el pollo encima. Dale un par de vueltas.</p>
+            <p id="texto_recetas">5. Añade también la nata (puedes sustituir la nata por leche de coco) y las dos cucharadas de curry.
+              Pon también un poco de pimienta negra.</p>
+            <p id="texto_recetas">6. Deja que se cocine todo junto hasta que la salsa espese. Cuanto más tiempo lo tengas al fuego, más espesará, así que cuando esté a tú gusto lo puedes retirar del fuego.
+              ¡Y así de fácil estará listo el pollo al curry!</p>
+            <br>
+            <br>
+            <hr>
+        </div>
+
+        <div id="recetas">
+          <h1>Flamenquines caseros</h1>
+          <img src="img/flamenquines2.jpg" alt="Los Angeles" width="800" height="500" style="float: right; margin-top: 150px; margin-right: 150px">
+          <p id="texto_recetas">Quizás la única dificultad por así decirlo es realizar una buena fritura pero si sigues nuestros consejos te quedarán estupendos. Si que es cierto que para freír bien lo mejor es ir adquiriendo cierta experiencia para saber entender el aceite y sus temperaturas y conseguir los mejores resultados, y también puedes optar por una freidora ya que simplifica mucho esta tarea.
+
+            Si te gustan este tipo de rebozados seguro que te van a encantar los escalopines con salsa de cabrales y patatas panaderas y manzana al membrillo, y por supuesto el cachopo asturiano de ternera con patatas fritas y pimientos del piquillo.</p>
+          <h2 id="h2_recetas">INGREDIENTES</h2>
+          <form id="texto_recetas" action="/action_page.php">
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label> 8 filetes de lomo de cerdo</label><br>
+              <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+              <label> 8 lonchas de jamón serrano.</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label> Queso (opcional)</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label> Aceite de oliva o de girasol</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label> Harina de trigo y pan rallado.</label><br>
+              <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+              <label> 2 huevos M.</label><br><br>
+            </form>
+          <h2 id="h2_recetas">ELABORACIÓN</h2>
+          <p id="texto_recetas">1. Extiende los filetes de lomo de cerdo sobre una tabla y golpéalos con un martillo, mazo o similar para que se ablanden y queden planos y estirados. Yo utilizo un mazo que tengo para preparar mojitos, no tengo otro y me hace la función </p>
+          <p id="texto_recetas">2. Cubre cada filete con una loncha de jamón serrano (o media, según sean de grandes, aunque no pasa nada si la tienes que poner doble).
+
+            Pon también queso en los que quieras que lo lleven. Fíjate en la fotografía, si lo pones córtalo en forma de barrita.</p>
+          <p id="texto_recetas">3. Enrolla los lomos con su rellenos dentro de forma que queden bien apretados y así verás que no se deshacen en ningún momento.
+            Pon en un plato harina, en otro los huevos batidos y en otro pan rallado.</p>
+          <p id="texto_recetas">4. Una vez hecho esto y cuando los espaguetis estén cocinados, guardamos unos cuantos cucharones del caldo de la cocción. Después escurrimos los espaguetis del resto del caldo</p>
+          <p id="texto_recetas">5.Ahora ve pasando cada flamenquín por cada uno y por todos lados, incluidos los laterales. Primero por el de harina y después sacúdelos un poco para retirar el exceso de harina que puedan haber cogido.</p>
+          <p id="texto_recetas">6. Ahora toca freírlos y puedes hacerlo en sartén/cazo o en freidora.</p>
+          <br>
+          <br>
+          <hr>
+      </div>
+
+      <div id="recetas">
+        <h1>Tarta de Queso</h1>
+        <img src="img/tarta2.jpg" alt="Los Angeles" width="800" height="500" style="float: right; margin-top: 150px; margin-right: 150px">
+        <p id="texto_recetas">He de deciros que yo siento cierta debilidad por esta tarta de queso, creo que debería deciros que es mi tarta favorita. Siento cierta atracción por todo tipo de tartas, pasteles, bizcochos, o cupcakes que lleven como ingrediente principal el queso, me encanta. Creo que es algo afín a muchos de vosotros y gracias a ello  esta tarta de queso es la receta más visitada del blog.</p>
+        <h2 id="h2_recetas">INGREDIENTES</h2>
+        <form id="texto_recetas" action="/action_page.php">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label> 2 paquetes de galletas tipo María</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label> 100 gr. de mantequilla</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label> 1 paquete de cacahuetes con miel</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label> 400 gr. de nata liquida para montar 35% materia grasa</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label> 100 gr. de azúcar</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label> 2  sobres de cuajada</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label> 500 gr de queso de untar (estilo Queso Philadelphia)</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label> Mermelada</label><br><br>
+          </form>
+        <h2 id="h2_recetas">ELABORACIÓN</h2>
+        <p id="texto_recetas">1. Derretimos la mantequilla (usamos el microondas, es más rápido). Con la picadora trituramos las galletas (sino tuvierais, en un trapo de cocina echamos las 25 galletas y las envolvemos para luego machacarlas con una cuchara o algo pesado, no queda tan fino pero sirve igual) y añadimos por encima la mantequilla derretida.</p>
+        <p id="texto_recetas">2. Cogemos la mezcla de mantequilla y galletas y la repartimos por la base de un molde desmontable grande.
+          Apretamos contra el fondo con la ayuda de una cuchara o con los dedos. Introducimos en la nevera mientras hacemos la crema de queso.</p>
+        <p id="texto_recetas">3.En un bol introducimos las dos tarrinas de crema de queso crema.
+          Añadimos la mitad de la leche condensada y mezclamos con la batidora.</p>
+        <p id="texto_recetas">4.El paso más complicado viene por el tema de la gelatina. Ponemos 10 g. de gelatina neutra en un bol que esté seco. De 300 ml de agua (1 vaso y medio aprox.) de agua fría. Separamos una tacita y la añadimos a la gelatina.</p>
+        <p id="texto_recetas">5. Ponemos el resto del agua en un cazo al fuego hasta ebullición (o al micro directamente 2 minutos). Retiramos y vertemos el agua en el recipiente donde se había dejado la gelatina.</p>
+        <p id="texto_recetas">6. Removemos hasta su completa disolución. Mezclamos con la crema de queso y el resto de la leche condesada. Batimos ligeramente toda la mezcla para que quede homogénea y sin ningún grumo.</p>
+        <p id="texto_recetas">7. Montamos la nata. El mejor consejo, que todos los ingredientes estén fríos. Al contrario que en el merengue (que debe estar a temperatura ambiente) la nata debe utilizarse fría. La nata, el azúcar y el recipiente deben estar recién salidos de la nevera. Batimos el azúcar y la nata hasta que quede compacta. Os aseguro que con el truco del frío sale perfecto.</p>
+        <p id="texto_recetas">8. Mezclamos la nata montada con la mezcla de queso pero de manera suave. Utilizamos mejor una espátula de madera o silicona para que no baje la nata.</p>
+        <p id="texto_recetas">9. Sacamos el recipiente con la base de galleta de la nevera y echamos la crema de queso. Volvemos a introducir en la nevera unas 4 horas.</p>
+        
+        <br>
+        <br>
+        <hr>
+    </div>
+
+    <footer>
+      <section id="descripcion">
+          <h3>Las Recetas de la Abuela</h3>
+          <p>
+              Este proyecto pretende dar a conocer las recetas las abuelas... Aqui podras ver todas las recetas paso a paso.
+          </p>
+      </section>
+      <section id="enlaces">
+          <h3>ENLACES INTERÉS</h3>
+          <p><a href="https://www.w3schools.com/bootstrap4/">W3SCHOOLS
+          </a></p>
+          <p><a href="https://www.recetasderechupete.com/">RECETAS 1</a></p>
+          <p><a href="https://www.cocinaconpoco.com/">RECETAS 2</a></p>
+      </section>
+      <div id="copy">
+          <section style="float: left;">
+          &copy; 2022 Juan Rafael Pedraza Gálvez
+          <br>
+          <a href="https://www.instagram.com/?hl=es" target="_blank"><img class="redes" src="img/logotipo-de-instagram.png" alt="instagram" width="30px"></a>
+          <a href="https://twitter.com/Juanrita_02" target="_blank"><img class="redes" src="img/twitter.png" alt="twitter" width="30px"></a>
+          <a href="https://www.behance.net/thejuanritahd/projects" target="_blank"><img class="redes" src="img/logotipo-de-behance.png" alt="behance" width="30px"></a>
+          <a href="mailto:a20pegaju@iesgrancapitan.org" target="_blank"><img class="redes" src="img/correo-abierto.png" alt="correo" width="30px"></a>
+          <a href="tel:647104987" target="_blank"><img class="redes" src="img/llamada-telefonica.png" alt="telefono" width="30px"></a>
+          </section>
+
+          <section style="float: right;">
+          &copy; 2022 Álvaro Salado Palomares
+          <br>
+          <a href="#"><img class="redes" src="img/logotipo-de-instagram.png" alt="instagram" width="30px"></a>
+          <a href="https://twitter.com/iesgrancapitan" target="_blank"><img class="redes" src="img/twitter.png" alt="twitter" width="30px"></a>
+          <a href="mailto:a20sapaal@iesgrancapitan.org" target="_blank"><img class="redes" src="img/correo-abierto.png" alt="correo" width="30px"></a>
+          <a href="tel:865453443" target="_blank"><img class="redes" src="img/llamada-telefonica.png" alt="telefono" width="30px"></a>
+          </section>
+      </div>
+  </footer>
+
+
+
+
+    </body>
+</html>
