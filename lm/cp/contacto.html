@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <title>Turismo Cordoba</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Cordoba ciudad patrimonio">
+        <meta name="keywords" content="Turismo, patrimonio, viajes">
+        <link rel="stylesheet" href="estilo_sitios.css">
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mezquita.html">La Mezquita</a></li>
+            <li><a href="cascohistorico.html">Casco Histórico</a></li>
+            <li><a href="medina.html">Medina Azahara</a></li>
+            <li><a  href="patios.html">Los Patios</a></li>
+            <li><a class="active" href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Contacta con nosotros</h1>
+        <form action="submeter-formulario.php" method="post" >
+            <img src="img/user.svg" height="25px" width="25px">
+            <p>
+                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Nombre">
+            </p>
+          
+            <img src="img/user.svg" height="25px" width="25px">
+            <p>
+                <input type="text" name="introducir_apellido" id="apellido" required="obligatorio" placeholder="Apellidos">
+            </p>
+            
+            <img src="img/telefono.svg" height="25px" width="25px">
+            <p>
+                <input type="tel" name="introducir_telefono" id="telefono" placeholder="Teléfono de contacto">
+            </p> 
+            
+            <img src="img/pencil.svg" height="25px" width="25px">
+            <p>                    
+                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deje aquí su mensaje"></textarea> 
+            </p>                    
+          
+            <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>         
+      </form>
+
+    </main>
+
+        <footer>
+            <section id="descripcion">
+                <h3>CÓRDOBA PATRIMONIO</h3>
+                <p>
+                    Este proyecto pretende dar a conocer nuestra ciudad, gran parte de su patrimonio, historia y cultura... Córdoba, Ciudad Patrimonio de la Humanidad.
+                </p>
+            </section>
+            <section id="webs">
+                <h3>WEBS OFICIALES</h3>
+                <p><a href="https://dipucordoba.es/">Diputación de Córdoba</a></p>
+                <p><a href="https://www.turismodecordoba.org/">Turismo de Córdoba</a></p>
+                <p><a href="https://www.cordoba.es/">Ayuntamiento de Córdoba</a></p>
+            </section>
+            <section id="enlaces">
+                <h3>ENLACES INTERÉS</h3>
+                <p><a href="https://es.wikipedia.org/wiki/Mezquita-catedral_de_C%C3%B3rdoba">La Mezquita</a></p>
+                <p><a href="https://es.wikipedia.org/wiki/Centro_hist%C3%B3rico_de_C%C3%B3rdoba">Casco Histórico</a></p>
+                <p><a href="https://es.wikipedia.org/wiki/Medina_Azahara">Medina Azahara</a></p>
+            </section>
+            <div id="copy">
+                &copy; 2022 Juan Rafael Pedraza Gálvez
+                <br>
+                
+                <a href="https://www.instagram.com/?hl=es" target="_blank"><img class="redes" src="img/logotipo-de-instagram.png" alt="instagram" width="30px"></a>
+                <a href="https://twitter.com/Juanrita_02" target="_blank"><img class="redes" src="img/twitter.png" alt="twitter" width="30px"></a>
+                <a href="https://www.behance.net/thejuanritahd/projects" target="_blank"><img class="redes" src="img/logotipo-de-behance.png" alt="behance" width="30px"></a>
+                <a href="mailto:a20pegaju@iesgrancapitan.org" target="_blank"><img class="redes" src="img/correo-abierto.png" alt="correo" width="30px"></a>
+                <a href="tel:647104987" target="_blank"><img class="redes" src="img/llamada-telefonica.png" alt="telefono" width="30px"></a>
+            </div>
+        </footer>
+</body>
+</html>
