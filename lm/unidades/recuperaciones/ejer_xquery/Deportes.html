@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Juan Rafael Pedraza Gálvez: Ejer_Deportes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <style>
+    h1{
+      font-family: monospace;
+    }
+
+    h2{
+      font-family: monospace;
+      margin-bottom: none;
+    }
+
+    html{
+      background-color: rgb(180, 180, 180);
+    }
+
+    a{
+      font-family: monospace;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<h1>Deportes: Ejercicios resueltos</h1>
+<a href="Deportes/deportes.xml" download="deportes.xml">Download XML</a><br>
+<a href="Deportes/deportes.dtd" download="deportes.dtd">Download DTD</a><br>
+<a href="Deportes/deportes.xsd" download="deportes.xsd">Download XSD</a><br>
+<body>
+  <div id="consulta 1">
+  <h1>Consulta 1</h1>
+  <h3>1. Obtener la marca, modelo y precio de los vehículos que cuesten igual o mas de 87000 €.</h3>
+  <code>
+    for $nombre in doc("deportes.xml")/equipos_de_futbol/equipo/nombre/text()
+    return <nombre>{$nombre}</nombre>
+  </code>
+</div>
+  <img src="Deportes/img/1.png" alt="Resultado">
+
+  <div id="consulta 2">
+  <h1>Consulta 2</h1>
+  <h3>2. Muestra los jugadores cuya edad sea mayor de 30 años.</h3>
+  <code>
+    for $jugador  in doc("deportes.xml")/equipos_de_futbol/equipo/jugadores/jugador
+    where $jugador/edad >= 30
+    return $jugador
+  </code>
+  </div>
+  <img src="Deportes/img/2.png" alt="Resultado">
+
+  <div id="consulta 3">
+  <h1>Consulta 3</h1>
+  <h3>3. Mostrar sólo el nombre sin atributos de los jugadores cuya edad sea menor o igual a 30.</h3>
+  <code>
+    for $jugador in doc("deportes.xml")/equipos_de_futbol/equipo/jugadores/jugador[edad<=30]
+    return <nombre>{$jugador/nombre/text()}</nombre>
+  </code>
+  </div>
+  <img src="Deportes/img/3.png" alt="Resultado">
+
+  <div id="consulta 4">
+  <h1>Consulta 4</h1>
+  <h3>4. Mostrar los jugadores ordenados primero por "posicion" y luego por "jugador" en una sola consulta.</h3>
+  <code>
+    for $jugador in doc("deportes.xml")/equipos_de_futbol/equipo/jugadores/jugador
+    order by $jugador/@posicion,$jugador/nombre
+    return $jugador
+  </code>
+</div>
+<img src="Deportes/img/4.png" alt="Resultado">
+
+  <div id="consulta 5">
+  <h1>Consulta 5</h1>
+  <h3>5. Mostrar el año mínimo y máximo de los jugadores</h3>
+  <code>
+    let $max := max(doc("deportes.xml")/equipos_de_futbol/equipo/jugadores/jugador/edad), 
+    $min := min(doc("deportes.xml")/equipos_de_futbol/equipo/jugadores/jugador/edad)
+return
+<resultado>
+  <max>{$max}</max>
+  <min>{$min}</min>
+</resultado>
+  </code>
+  </div>
+  <img src="Deportes/img/5.png" alt="Resultado">
+
+  <div id="consulta 6">
+  <h1>Consulta 6</h1>
+  <h3>6. Mostrar los jugadores que terminan por la letra "o".</h3>
+  <code>
+    for $jugador in doc("deportes.xml")/equipos_de_futbol/equipo/jugadores/jugador
+    where ends-with($jugador/nombre, "o")
+    return $jugador
+  </code>
+  </div>
+  <img src="Deportes/img/6.png" alt="Resultado">
+
+  <div id="consulta 7">
+  <h1>Consulta 7</h1>
+  <h3>7. Mostrar los equipos que tengan una "S" mayúscula o minúscula en el nombre.</h3>
+  <code>
+    for $equipo in doc("deportes.xml")/equipos_de_futbol/equipo
+    where contains($equipo/nombre, "s") or contains($equipo/nombre, "S")
+    return $equipo
+  </code>
+  </div>
+  <img src="Deportes/img/7.png" alt="Resultado">
+
+  <div id="consulta 8">
+  <h1>Consulta 8</h1>
+  <h3>8. Mustra los jugadores que sean de nacionalidad Española</h3>
+  <code>
+    for $jugador in doc("deportes.xml")/equipos_de_futbol/equipo/jugadores/jugador[nacionalidad="española"]
+    return <nombre>{$jugador/nombre/text()}</nombre>
+  </code>
+    </div>
+    <img src="Deportes/img/8.png" alt="Resultado">
+
+  <div id="consulta 9">
+  <h1>Consulta 9</h1>
+  <h3>9. Mustra el nombre del equipo y el numero de caracteres que tiene.</h3>
+  <code>
+    for $equipo in doc("deportes.xml")/equipos_de_futbol/equipo
+    return 
+  <nombre>
+    {$equipo/nombre}
+    <length>{string-length($equipo/nombre)}</length>
+  </nombre>
+  </code>
+  </div>
+  <img src="Deportes/img/9.png" alt="Resultado">
+
+  <div id="consulta 10">
+  <h1 id=c10>Consulta 10</h1>
+  <h3>10. Mostrar los nombres de los equipos en una tabla de HTML.</h3>
+  <code>
+    <table>
+      {
+        for $equipo in doc("deportes.xml")/equipos_de_futbol/equipo
+        return 
+          <tr>
+            <td>{$equipo/nombre/text()}</td>
+          </tr>
+      }
+      </table>
+  </code>
+  </div>
+  <img src="Deportes/img/10.png" alt="Resultado">
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Deportes.xsl"?>
+<consultas>
+    <trabajo id="Deportes">
+        <consulta id="consulta 1">
+            1. Obtener la marca, modelo y precio de los vehículos que cuesten igual o mas de 87000 €.
+        </consulta>
+        <consulta id="consulta 2">
+            2. Muestra los jugadores cuya edad sea mayor de 30 años.
+        </consulta>
+        <consulta id="consulta 3">
+            3. Mostrar sólo el nombre sin atributos de los jugadores cuya edad sea menor o igual a 30.
+        </consulta>
+        <consulta id="consulta 4">
+            4. Mostrar los jugadores ordenados primero por "posicion" y luego por "jugador" en una sola consulta.
+        </consulta>
+        <consulta id="consulta 5">
+            5. Mostrar el año mínimo y máximo de los jugadores
+        </consulta>
+        <consulta id="consulta 6">
+            6. Mostrar los jugadores que terminan por la letra "o".
+        </consulta>
+        <consulta id="consulta 7">
+            7. Mostrar los equipos que tengan una "S" mayúscula o minúscula en el nombre.
+        </consulta>
+        <consulta id="consulta 8">
+            8. Mustra los jugadores que sean de nacionalidad Española.
+        </consulta>
+        <consulta id="consulta 9">
+            9. Mustra el nombre del equipo y el numero de caracteres que tiene.
+        </consulta>
+        <consulta id="consulta 10">
+            10. Mostrar los nombres de los equipos en una tabla de HTML.
+        </consulta>
+    </trabajo>
+</consultas>

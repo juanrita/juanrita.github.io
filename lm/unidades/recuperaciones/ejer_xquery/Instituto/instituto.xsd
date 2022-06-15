@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="ies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="web" type="xs:string"/>
+        <xs:element name="numero_clases" type="xs:string"/>
+        <xs:element ref="ciclos"/>
+        <xs:element ref="profesores"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ciclos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ciclo" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ciclo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="grado" type="xs:string"/>
+        <xs:element ref="decretoTitulo"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="decretoTitulo">
+    <xs:complexType>
+      <xs:attribute name="año" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="profesores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="profesor" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="profesor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="asignatura" type="xs:string"/>
+        <xs:element name="edad" type="xs:string"/>
+        <xs:element name="salario" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

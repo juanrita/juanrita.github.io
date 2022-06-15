@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Instituto.xsl"?>
+<consultas>
+    <trabajo id="Instituto">
+        <consulta id="consulta 1">
+            1. Mostrar el nombre de los ciclos junto al tipo de grado.
+        </consulta>
+        <consulta id="consulta 2">
+            2. Mostrar el nombre de los profesores cuyo sueldo sea mayor de 1500.
+        </consulta>
+        <consulta id="consulta 3">
+            3. Mostrar el nombre de los profesores y la asignatura que imparte.
+        </consulta>
+        <consulta id="consulta 4">
+            4. Mostrar la media de los salarios de los profesores.
+        </consulta>
+        <consulta id="consulta 5">
+            5. Mostrar el nombre de los profesores que tienen ma de 30 años.
+        </consulta>
+        <consulta id="consulta 6">
+            6. Muestra la suma de todos los salarios de los profesores.
+        </consulta>
+        <consulta id="consulta 7">
+            7. Muestra cuantos años tiene el profesor Jose.
+        </consulta>
+        <consulta id="consulta 8">
+            8. Muestra el nombre del los profesores y su salario añadiendole 300€ por pagas extras.
+        </consulta>
+        <consulta id="consulta 9">
+            9. Mostrar los datos de los profesores exepto su edad.
+        </consulta>
+        <consulta id="consulta 10">
+            10. Mostrar los ciclos que tengan un año de decreto mayor que 2009.
+        </consulta>
+    </trabajo>
+</consultas>

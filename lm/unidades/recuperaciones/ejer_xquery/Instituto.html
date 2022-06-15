@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Juan Rafael Pedraza Gálvez: Ejer_Instituto</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <style>
+    h1{
+      font-family: monospace;
+    }
+
+    h2{
+      font-family: monospace;
+      margin-bottom: none;
+    }
+
+    html{
+      background-color: rgb(180, 180, 180);
+    }
+
+    a{
+      font-family: monospace;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Instituto: Ejercicios resueltos</h1>
+<a href="Instituto/instituto.xml" download="instituto.xml">Download XML</a><br>
+<a href="Instituto/instituto.dtd" download="instituto.dtd">Download DTD</a><br>
+<a href="Instituto/instituto.xsd" download="instituto.xsd">Download XSD</a><br>
+<body>
+  <div id="consulta 1">
+  <h1>Consulta 1</h1>
+  <h3>1. Mostrar el nombre de los ciclos junto al tipo de grado.</h3>
+  <code>
+    for $ciclos in doc ("instituto.xml")/ies/ciclos/ciclo
+return <ciclos>{$ciclos/nombre/text()} ({$ciclos/grado/text()})</ciclos>
+  </code>
+</div>
+  <img src="Instituto/img/1.png" alt="Resultado">
+
+  <div id="consulta 2">
+  <h1>Consulta 2</h1>
+  <h3>2. Mostrar el nombre de los profesores cuyo sueldo sea mayor de 1500.</h3>
+  <code>
+    for $profesor in  doc ("instituto.xml")/ies/profesores/profesor
+    where $profesor/salario > 1500
+    return $profesor/nombre
+  </code>
+  </div>
+  <img src="Instituto/img/2.png" alt="Resultado">
+
+  <div id="consulta 3">
+  <h1>Consulta 3</h1>
+  <h3>3. Mostrar el nombre de los profesores y la asignatura que imparte.</h3>
+  <code>
+    for $profesores in doc ("instituto.xml")/ies/profesores/profesor
+    return <profesores>{$profesores/nombre/text()} ({$profesores/asignatura/text()})</profesores>
+  </code>
+  </div>
+  <img src="Instituto/img/3.png" alt="Resultado">
+
+  <div id="consulta 4">
+  <h1>Consulta 4</h1>
+  <h3>4. Mostrar la media de los salarios de los profesores.</h3>
+  <code>
+    let $profesores := doc ("instituto.xml")/ies/profesores/profesor
+    return <media>{avg($profesores/salario)}</media>
+  </code>
+</div>
+<img src="Instituto/img/4.png" alt="Resultado">
+
+  <div id="consulta 5">
+  <h1>Consulta 5</h1>
+  <h3>5. Mostrar el nombre de los profesores que tienen ma de 30 años.</h3>
+  <code>
+    for $profesor in doc("instituto.xml")/ies/profesores/profesor
+    where $profesor/edad > 30
+    return $profesor/nombre
+  </code>
+  </div>
+  <img src="Instituto/img/5.png" alt="Resultado">
+
+  <div id="consulta 6">
+  <h1>Consulta 6</h1>
+  <h3>6. Muestra la suma de todos los salarios de los profesores.</h3>
+  <code>
+    let $profesores := doc ("instituto.xml")/ies/profesores/profesor
+    return <total>{sum($profesores/salario)}</total>
+  </code>
+  </div>
+  <img src="Instituto/img/6.png" alt="Resultado">
+
+  <div id="consulta 7">
+  <h1>Consulta 7</h1>
+  <h3>7. Muestra cuantos años tiene el profesor Jose.</h3>
+  <code>
+    for $profesor in doc ("instituto.xml")/ies/profesores/profesor
+    where $profesor/nombre = "Jose"
+    return $profesor/edad
+  </code>
+  </div>
+  <img src="Instituto/img/7.png" alt="Resultado">
+
+  <div id="consulta 8">
+  <h1>Consulta 8</h1>
+  <h3>8. Muestra el nombre del los profesores y su salario añadiendole 300€ por pagas extras.</h3>
+  <code>
+    for $profesor in doc ("instituto.xml")/ies/profesores/profesor
+    order by $profesor/nombre
+    return 
+   <profesor>
+      {$profesor/nombre}
+      <salario>{$profesor/salario/text()}</salario>
+      <paga_extra>{$profesor/salario + 300}</paga_extra>
+   </profesor>
+  </code>
+    </div>
+    <img src="Instituto/img/8.png" alt="Resultado">
+
+  <div id="consulta 9">
+  <h1>Consulta 9</h1>
+  <h3>9. Mostrar los datos de los profesores exepto su edad.</h3>
+  <code>
+    for $profesores in doc ("instituto.xml")/ies/profesores/profesor
+    return <profesores>{$profesores/* except $profesores/edad}</profesores>
+  </nombre>
+  </code>
+  </div>
+  <img src="Instituto/img/9.png" alt="Resultado">
+
+  <div id="consulta 10">
+  <h1 id=c10>Consulta 10</h1>
+  <h3>10. Mostrar los ciclos que tengan un año de decreto mayor que 2009.</h3>
+  <code>
+    for $ciclos in doc ("instituto.xml")/ies/ciclos/ciclo
+    where $ciclos/decretoTitulo/@año = "2009"
+    return $ciclos/nombre
+  </code>
+  </div>
+  <img src="Instituto/img/10.png" alt="Resultado">
+</body>
+</html>

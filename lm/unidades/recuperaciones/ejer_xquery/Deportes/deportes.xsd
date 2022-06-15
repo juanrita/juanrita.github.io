@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="equipos_de_futbol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="equipo" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="equipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="ciudad" type="xs:string"/>
+        <xs:element name="entrenador" type="xs:string"/>
+        <xs:element ref="jugadores"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jugadores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="jugador" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="jugador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="nacionalidad" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="posicion" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

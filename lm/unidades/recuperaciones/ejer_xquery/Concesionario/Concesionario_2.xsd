@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="salon">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vehiculos"/>
+        <xs:element ref="clientes"/>
+        <xs:element ref="compras"/>
+        <xs:element ref="gestores"/>
+        <xs:element ref="demostraciones"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vehiculos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vehiculo" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vehiculo">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element name="marca" type="xs:string"/>
+        <xs:element name="modelo" type="xs:string"/>
+        <xs:element ref="precio"/>
+      </xs:sequence>
+      <xs:attribute name="cod" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="precio">
+    <xs:complexType mixed="true">
+      <xs:attribute name="moneda" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clientes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cliente" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="telefono" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="nif" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="compras">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cantidad" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cantidad">
+    <xs:complexType mixed="true">
+      <xs:attribute name="cliente" type="xs:string" use="required"/>
+      <xs:attribute name="fechacompra" type="xs:string" use="required"/>
+      <xs:attribute name="vehiculo" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gestores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gestor" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gestor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="direccion" type="xs:string"/>
+        <xs:element name="localidad" type="xs:string"/>
+        <xs:element name="provincia" type="xs:string"/>
+        <xs:element ref="salario"/>
+      </xs:sequence>
+      <xs:attribute name="cod" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="salario">
+    <xs:complexType mixed="true">
+      <xs:attribute name="unidad" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="demostraciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="prueba" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prueba">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element ref="vehiculo"/>
+        <xs:element ref="precio"/>
+        <xs:element name="plazas" type="xs:string"/>
+        <xs:element name="fecha" type="xs:string"/>
+        <xs:element name="piloto" type="xs:string"/>
+        <xs:element name="circuito" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

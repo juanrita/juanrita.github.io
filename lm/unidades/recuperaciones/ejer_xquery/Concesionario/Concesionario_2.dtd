@@ -1,0 +1,40 @@
+<!ELEMENT salon (vehiculos, clientes, compras, gestores, demostraciones)>
+<!ELEMENT vehiculos (vehiculo+)>
+<!ELEMENT vehiculo (marca?, modelo?, precio?)>
+<!ATTLIST vehiculo
+          cod CDATA #IMPLIED>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio
+          moneda CDATA #REQUIRED>
+<!ELEMENT clientes (cliente+)>
+<!ELEMENT cliente (nombre, telefono)>
+<!ATTLIST cliente
+          nif CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT compras (cantidad+)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ATTLIST cantidad
+          cliente CDATA #REQUIRED
+          fechacompra CDATA #REQUIRED
+          vehiculo CDATA #REQUIRED>
+<!ELEMENT gestores (gestor+)>
+<!ELEMENT gestor (nombre, direccion, localidad, provincia, salario)>
+<!ATTLIST gestor
+          cod CDATA #REQUIRED>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT salario (#PCDATA)>
+<!ATTLIST salario
+          unidad CDATA #REQUIRED>
+<!ELEMENT demostraciones (prueba+)>
+<!ELEMENT prueba (nombre, vehiculo, precio, plazas, fecha, piloto, circuito)>
+<!ATTLIST prueba
+          id CDATA #REQUIRED>
+<!ELEMENT plazas (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT piloto (#PCDATA)>
+<!ELEMENT circuito (#PCDATA)>

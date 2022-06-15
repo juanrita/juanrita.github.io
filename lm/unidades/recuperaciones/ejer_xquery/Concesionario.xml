@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Concesionario.xsl"?>
+<consultas>
+    <trabajo id="Concesionario">
+        <consulta id="consulta 1">
+            1. Obtener la marca, modelo y precio de los vehículos que cuesten igual o mas de 87000 €.
+        </consulta>
+        <consulta id="consulta 2">
+            2. Obtener el nif, nombre y el teléfono de los renting que han adquirido más de dos unidades de un "Tesla Model 3"
+            en el 2020. (No sabemos su código, sólo el nombre del vehículo).
+        </consulta>
+        <consulta id="consulta 3">
+            3. Obtener los modelos de todos los vehículos, ordenados primero por orden alfabético ascendente (marca primero y
+            modelo después) y luego por precio (de menor a mayor).
+        </consulta>
+        <consulta id="consulta 4">
+            4. Obtener (usando let) el número total de modelos diferentes ofertados y el coste total de comprar dos unidades de
+            cada uno de ellos.
+        </consulta>
+        <consulta id="consulta 5">
+            5. Obtener la marca y el modelo de los vehículos que cuestan menos de 40000€, su precio unitario, el número total de
+            veces que ha sido comprado, así como el valor de esas ventas en €.
+        </consulta>
+        <consulta id="consulta 6">
+            6. Obtener el mayor y menor salario de los gestores.
+        </consulta>
+        <consulta id="consulta 7">
+            7. Obtener, usando let, la suma de los salarios de los gestores que cobran mas de 900 €, que viven en la provincia de
+            Jaén (excepto los que viven en la capital) y además no tienen código D.
+        </consulta>
+        <consulta id="consulta 8">
+            8. Obtener los nombres de todos los pilotos (ordenados alfabéticamente), eliminando los repetidos e indicar todas las
+            demostraciones en las que participa.
+        </consulta>
+        <consulta id="consulta 9">
+            9. Obtener la media de los precios de todas los demostraciones, la suma de los precios de los demostraciones del
+            circuito 3 y el total de plazas que se ofertan en los dos "Rallye".
+        </consulta>
+        <consulta id="consulta 10">
+            10. Obtener el nombre de la prueba, su precio y el precio con un descuento del 25% para empleados del sector.
+            Ordenar por el nombre de la prueba desde el texto más largo hasta el más corto.
+        </consulta>
+    </trabajo>
+</consultas>

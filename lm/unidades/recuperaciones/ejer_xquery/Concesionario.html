@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Juan Rafael Pedraza Gálvez: Ejer_Concesionario</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <style>
+    h1{
+      font-family: monospace;
+    }
+
+    h2{
+      font-family: monospace;
+      margin-bottom: none;
+    }
+
+    html{
+      background-color: rgb(180, 180, 180);
+    }
+
+    a{
+      font-family: monospace;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<h1>Concesionario: Ejercicios resueltos</h1>
+<a href="Concesionario/Concesionario_2.xml" download="concesionario.xml">Download XML</a><br>
+<a href="Concesionario/Concesionario_2.dtd" download="concesionario.dtd">Download DTD</a><br>
+<a href="Concesionario/Concesionario_2.xsd" download="concesionario.xsd">Download XSD</a><br>
+
+    <div id="consulta 1">
+        <h2>Consulta 1</h2>
+        <code>for $coche in doc ("concesionario.xml")/salon/vehiculos/vehiculo[precio>=87000]
+return
+&lt;coche&gt;
+{$coche/marca, $coche/modelo, $coche/precio}
+&lt;/coche&gt;</code>
+    </div>
+    <img src="Concesionario/img/1.png" alt="Resultado">
+    <div id="consulta 2">
+        <h2>Consulta 2</h2>
+        <code>let $modelo := doc("concesionario.xml")/salon/vehiculos/vehiculo[marca="Tesla" and modelo = "Model 3"]/@cod
+for $cliente in doc("concesionario.xml")/salon/clientes/cliente
+let $compra := doc("concesionario.xml")/salon/compras/cantidad[@vehiculo =$modelo and .>2 and contains(@fechacompra,"2020")]
+where $cliente/@nif = $compra/@cliente 
+return
+&lt;renting nif="{$cliente/@nif}"&gt;
+    {$cliente/nombre}
+    {$cliente/telefono}
+&lt;/renting&gt;</code>    
+    </div>
+    <img src="Concesionario/img/2.png" alt="Resultado">
+    <div id="consulta 3">
+        <h2>Consulta 3</h2>
+        <code>for $coche in doc("concesionario.xml")/salon/vehiculos/vehiculo
+order by $coche/marca, $coche/modelo, $coche/precio
+return
+&lt;vehiculos&gt;
+    {$coche}
+&lt;/vehiculos&gt;</code>  
+    </div>
+    <img src="Concesionario/img/3.png" alt="Resultado">
+    <div id="consulta 4">
+        <h2>Consulta 4</h2>
+        <code>let $contador := count(distinct-values(doc("concesionario.xml")/salon/vehiculos/vehiculo))
+let $preciototal := sum(doc("concesionario.xml")/salon/vehiculos/vehiculo/precio)
+return
+&lt;ejercicio&gt;
+    &lt;resultado&gt;
+        &lt;modelostotales&gt;{$contador}&lt;/modelostotales&gt;
+        &lt;calculototal&gt;{$preciototal*2} &lt;/calculototal&gt;
+    &lt;/resultado&gt;
+&lt;/ejercicio&gt;</code>
+        
+    </div>
+    <img src="Concesionario/img/4.png" alt="Resultado">
+    <div id="consulta 5">
+        <h2>Consulta 5</h2>
+        <code>for $vehiculo in doc("concesionario.xml")/salon/vehiculos/vehiculo
+let $ventas :=sum(doc("concesionario.xml")/salon/compras/cantidad[@vehiculo=$vehiculo/@cod])
+where $vehiculo/precio <= 40000
+return
+&lt;vehiculo&gt;
+    &lt;marca&gt;{$vehiculo/marca/text()}&lt;/marca&gt;
+    &lt;modelo&gt;{$vehiculo/modelo/text()}&lt;/modelo&gt;
+    {$vehiculo/precio}
+    &lt;ventas&gt;{$ventas}&lt;/ventas&gt;
+    &lt;dinerototal&gt;{$vehiculo/precio * $ventas}&lt;/dinerototal&gt;
+&lt;/vehiculo&gt;</code>  
+    </div>
+    <img src="Concesionario/img/5.png" alt="Resultado">
+    <div id="consulta 6">
+        <h2>Consulta 6</h2>
+        <code>let $salariomayor := max(doc("concesionario.xml")/salon/gestores/gestor/salario)
+let $salariomenor := min(doc("concesionario.xml")/salon/gestores/gestor/salario)
+return
+&lt;salarios&gt;
+    &lt;mayor>{$salariomayor}&lt;/mayor&gt;
+    &lt;menor>{$salariomenor}&lt;/menor&gt;
+&lt;/salarios&gt;</code>
+    </div>
+    <img src="Concesionario/img/6.png" alt="Resultado">
+    <div id="consulta 7">
+        <h2>Consulta 7</h2>
+        <code>let $sumasalarios := sum(doc("concesionario.xml")//gestores/gestor[salario>900 and provincia ='Jaén' and localidad != 'Jaén' and not(@codigo[contains(@cod,'D')])]/salario)
+return &lt;sumasalarios&gt;{$sumasalarios}&lt;/sumasalarios&gt;</code>  
+    </div>
+    <img src="Concesionario/img/7.png" alt="Resultado">
+    <div id="consulta 8">
+        <h2>Consulta 8</h2>
+        <code>for $nombre in distinct-values(doc("concesionario.xml")/salon/demostraciones/prueba/piloto)
+let $prueba := doc("concesionario.xml")/salon/demostraciones/prueba[piloto = $nombre]/nombre
+order by $nombre
+return
+&lt;pilotos&gt;
+    &lt;piloto&gt;
+        &lt;nombre&gt;{$nombre}&lt;/nombre&gt;
+        &lt;pruebas&gt;{$prueba}&lt;/pruebas&gt;
+    &lt;/piloto&gt;
+&lt;/pilotos&gt;</code>
+    </div>
+    <img src="Concesionario/img/8.png" alt="Resultado">
+    <div id="consulta 9">
+        <h2>Consulta 9</h2>
+        <code>let $media := avg(doc("concesionario.xml")/salon/demostraciones/prueba/precio)
+let $suma := sum(doc("concesionario.xml")/salon/demostraciones/prueba[circuito = 3]/precio)
+let $totalplazas := sum(doc("concesionario.xml")/salon/demostraciones/prueba[contains(nombre, "Rallye")]/plazas)
+return
+&lt;coches&gt;
+    &lt;media>{$media}&lt;/media&gt;
+    &lt;suma>{$suma}&lt;/suma&gt;
+    &lt;plazas>{$totalplazas}&lt;/plazas&gt;
+&lt;/coches&gt;</code>
+    </div>
+    <img src="Concesionario/img/9.png" alt="Resultado">
+    <div id="consulta 10">
+        <h2>Consulta 10</h2>
+        <code>for $prueba in doc("concesionario.xml")//demostraciones/prueba
+order by string-length($prueba/nombre) descending
+return
+&lt;prueba&gt;
+    &lt;nombre>{$prueba/nombre/text()}&lt;/nombrev
+    &lt;precio>{$prueba/precio/text()}&lt;/precio&gt;
+    &lt;precioparaempleados>{$prueba/precio/text() * 0.75}&lt;/precioparaempleados&gt;
+&lt;/prueba&gt;</code>
+    </div>
+    <img src="Concesionario/img/10.png" alt="Resultado">
+</body>
+</html>

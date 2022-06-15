@@ -1,0 +1,19 @@
+<!ELEMENT ies (nombre, web, numero_clases, ciclos, profesores)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT web (#PCDATA)>
+<!ELEMENT numero_clases (#PCDATA)>
+<!ELEMENT ciclos (ciclo+)>
+<!ELEMENT ciclo (nombre, grado, decretoTitulo)>
+<!ATTLIST ciclo
+          id CDATA #REQUIRED>
+<!ELEMENT grado (#PCDATA)>
+<!ELEMENT decretoTitulo (#PCDATA)>
+<!ATTLIST decretoTitulo
+          año CDATA #REQUIRED>
+<!ELEMENT profesores (profesor+)>
+<!ELEMENT profesor (nombre, asignatura, edad, salario)>
+<!ATTLIST profesor
+          id CDATA #REQUIRED>
+<!ELEMENT asignatura (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT salario (#PCDATA)>
