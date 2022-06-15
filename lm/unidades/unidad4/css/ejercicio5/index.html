@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <title>Actividades Unidad 4: Selectores</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Ejercicio selectores">
+        <meta name="keywords" content="actividades">
+        <style>
+            p[name] {
+                background: yellow;
+            }
+            p[name="p2"] {
+                background: red;
+            }
+            p[name~="p3"] {
+                background: green;
+            }
+            p[name^="p4"] {
+                background: grey;
+            }
+            p[name$="p5"] {
+                background: purple;
+            }
+            p[name^="p6"] {
+                background: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <p name>P1</p>
+        <p name="p2">P2</p>
+        <p name="p3">P3</p>
+        <p name="p4">P4</p>
+        <p name="holap5">P5</p>
+        <p name="p6">P6</p>
+    </body>
+</html>
