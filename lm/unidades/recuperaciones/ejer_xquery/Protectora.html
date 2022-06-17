@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Juan Rafael Pedraza Gálvez: Ejer_Protectora</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <style>
+    h1{
+      font-family: monospace;
+    }
+
+    h2{
+      font-family: monospace;
+      margin-bottom: none;
+    }
+
+    html{
+      background-color: rgb(180, 180, 180);
+    }
+
+    a{
+      font-family: monospace;
+      text-decoration: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<h1>Protectora: Ejercicios resueltos</h1>
+<a href="Protectora/protectora.xml" download="concesionario.xml">Download XML</a><br>
+<a href="Protectora/protectora.dtd" download="concesionario.xml">Download DTD</a><br>
+<a href="Protectora/protectora.xsd" download="concesionario.xsd">Download XSD</a><br>
+
+    <div id="consulta 1">
+        <h2>Consulta 1</h2>
+        <code>
+
+        </code>
+    </div>
+    <img src="img/1.png" alt="Resultado">
+    <div id="consulta 2">
+        <h2>Consulta 2</h2>
+        <code>
+            for $mascotas  in doc("protectora.xml")/protectora/mascotas/categoria/perro
+return <perro>{$mascotas /nombre,$mascotas /raza}</perro>
+        </code>    
+    </div>
+    <img src="Protectora/img/2.png" alt="Resultado">
+    <div id="consulta 3">
+        <h2>Consulta 3</h2>
+        <code>
+            for $mascotas  in doc("protectora.xml")/protectora/mascotas/categoria/perro[nombre="Filipa"]/cartilla_sanitaria/consulta
+return $mascotas/descripcion
+        </code>  
+    </div>
+    <img src="Protectora/img/3.png" alt="Resultado">
+    <div id="consulta 4">
+        <h2>Consulta 4</h2>
+        <code>
+            for $veterinario  in doc("protectora.xml")/protectora/mascotas/categoria/gato[nombre="Roma"]/cartilla_sanitaria/consulta/veterinario
+return $veterinario/nombre
+        </code>
+        
+    </div>
+    <img src="Protectora/img/4.png" alt="Resultado">
+    <div id="consulta 5">
+        <h2>Consulta 5</h2>
+        <code>
+            let $consultas := doc ("protectora.xml")/protectora/mascotas/categoria/gato/cartilla_sanitaria/consulta
+return <media_total>{avg($consultas/importe)},{sum($consultas/importe)}</media_total>
+        </code>  
+    </div>
+    <img src="Protectora/img/5.png" alt="Resultado">
+    <div id="consulta 6">
+        <h2>Consulta 6</h2>
+        <code>
+
+        </code>
+    </div>
+    <img src="img/6.png" alt="Resultado">
+    <div id="consulta 7">
+        <h2>Consulta 7</h2>
+        <code>
+
+        </code>  
+    </div>
+    <img src="img/7.png" alt="Resultado">
+    <div id="consulta 8">
+        <h2>Consulta 8</h2>
+        <code>
+
+        </code>
+    </div>
+    <img src="img/8.png" alt="Resultado">
+    <div id="consulta 9">
+        <h2>Consulta 9</h2>
+        <code>
+            for $mascotas  in doc("protectora.xml")/protectora/mascotas/categoria/perro[raza="Pator Alemán"]
+            return $mascotas/nombre
+        </code>
+    </div>
+    <img src="Protectora/img/9.png" alt="Resultado">
+    <div id="consulta 10">
+        <h2>Consulta 10</h2>
+        <code>
+
+        </code>
+    </div>
+    <img src="img/10.png" alt="Resultado">
+</body>
+</html>

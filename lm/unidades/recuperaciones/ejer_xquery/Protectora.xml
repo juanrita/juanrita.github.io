@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Protectora.xsl"?>
+<consultas>
+    <trabajo id="Protectora">
+        <consulta id="consulta 1">
+            1. Nombre de las mascotas que han entrado en centro en el año 2020 ordenadas por edad.
+        </consulta>
+        <consulta id="consulta 2">
+            2. Nombre y raza de los perros disponibles en la protectora.
+        </consulta>
+        <consulta id="consulta 3">
+            3. Tratamientos realizados a la perra Filipa, mostrando los más recientes primero.
+        </consulta>
+        <consulta id="consulta 4">
+            4. Veterinarios que han tratado a la gata Roma.
+        </consulta>
+        <consulta id="consulta 5">
+            5. Gasto total en consultas y gasto medio por consulta.
+        </consulta>
+        <consulta id="consulta 6">
+            6. Tratamiento y mascota con la consulta más cara.
+        </consulta>
+        <consulta id="consulta 7">
+            7. Categorías de mascotas y número de animales.
+        </consulta>
+        <consulta id="consulta 8">
+            8. Número de mascotas que entraron en la protectora en el año 2020
+        </consulta>
+        <consulta id="consulta 9">
+            9. Nombres de los pastores alemanes.
+        </consulta>
+        <consulta id="consulta 10">
+            10. Mascotas que todavía no han sido desparasitadas.
+        </consulta>
+    </trabajo>
+</consultas>

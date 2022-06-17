@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="protectora">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="direccion" type="xs:string"/>
+        <xs:element ref="mascotas"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mascotas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="categoria" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="categoria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gato" maxOccurs="unbounded"/>
+        <xs:element ref="perro" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="nombre" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="perro">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="sexo" type="xs:string"/>
+        <xs:element name="foto" type="xs:string"/>
+        <xs:element name="raza" type="xs:string"/>
+        <xs:element name="edad" type="xs:string"/>
+        <xs:element ref="cartilla_sanitaria"/>
+      </xs:choice>
+      <xs:attribute name="fecha_llegada" type="xs:string" use="required"/>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cartilla_sanitaria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="consulta" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consulta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="descripcion" type="xs:string"/>
+        <xs:element ref="veterinario"/>
+        <xs:element ref="importe"/>
+      </xs:sequence>
+      <xs:attribute name="cod_consulta" type="xs:string" use="required"/>
+      <xs:attribute name="fecha" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="veterinario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="colegiado" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="importe">
+    <xs:complexType mixed="true">
+      <xs:attribute name="moneda" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="sexo" type="xs:string"/>
+        <xs:element name="raza" type="xs:string"/>
+        <xs:element name="edad" type="xs:string"/>
+        <xs:element name="foto" type="xs:string"/>
+        <xs:element ref="cartilla_sanitaria"/>
+      </xs:sequence>
+      <xs:attribute name="fecha_llegada" type="xs:string" use="required"/>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

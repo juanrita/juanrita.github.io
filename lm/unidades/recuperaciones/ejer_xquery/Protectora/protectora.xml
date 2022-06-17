@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protectora>
+  <nombre>SOMAS</nombre> 
+  <direccion>Finca de la Huerta</direccion> 
+  <mascotas>
+    <categoria nombre ="Perros">
+	      <perro id="P1" fecha_llegada="2019-12-12">
+		       <nombre>Covid</nombre>
+			     <sexo>Macho</sexo>
+			     <foto>p1.jpg</foto>
+			     <raza>Mastín</raza>
+			     <edad>1</edad>
+			     <cartilla_sanitaria>
+        <consulta cod_consulta="p1_c01" fecha="2019-02-19">
+                   <descripcion>Desparasitación.</descripcion>
+                    <veterinario colegiado ="V1">
+         <nombre>Enrique López</nombre>
+                    </veterinario>
+                    <importe moneda="€">50</importe>
+                </consulta>
+		        <consulta cod_consulta="p1_c02" fecha="2019-02-19">
+                    <descripcion>Desparasitación.</descripcion>
+                    <veterinario colegiado ="V1">
+                        <nombre>Enrique López</nombre>
+                </veterinario>
+                    <importe moneda="€">50</importe>
+                </consulta>
+            </cartilla_sanitaria>
+		</perro>
+		<perro id="P2" fecha_llegada="2020-01-01">
+		    <nombre>Filipa</nombre>
+			<sexo>Hembra</sexo>
+			<raza>Pator Alemán</raza>
+			     <edad>1</edad>
+			<foto>p2.jpg</foto>
+			<cartilla_sanitaria>
+                <consulta cod_consulta="p2_c01" fecha="2019-02-19">
+                    <descripcion>Desparasitación.</descripcion>
+                    <veterinario colegiado ="V1">
+                        <nombre>Enrique López</nombre>
+                    </veterinario>
+                    <importe moneda="€">50</importe>
+                </consulta>
+                
+            </cartilla_sanitaria>
+		</perro>
+    </categoria>
+	<categoria nombre ="Gatos">
+	    <gato id="G1" fecha_llegada="2019-12-12">
+		    <nombre>Jerusalen</nombre>
+			<sexo>Macho</sexo>
+			<raza>Romano</raza>
+			     <edad>1</edad>
+			<foto>g1.jpg</foto>
+			<cartilla_sanitaria>
+                <consulta cod_consulta="g1_c01" fecha="2019-02-19">
+                    <descripcion>Desparasitación.</descripcion>
+                    <veterinario colegiado ="V1">
+                        <nombre>Enrique López</nombre>
+                    </veterinario>
+                    <importe moneda="€">50</importe>
+                </consulta>
+				<consulta cod_consulta="g1_c02" fecha="2019-02-19">
+                    <descripcion>Desparasitación.</descripcion>
+                    <veterinario colegiado ="V1">
+                        <nombre>Gema León</nombre>
+                    </veterinario>
+                    <importe moneda="€">50</importe>
+                </consulta>
+            </cartilla_sanitaria>
+		</gato>
+		<gato id="G2" fecha_llegada="2020-01-01">
+		    <nombre>Roma</nombre>
+			<sexo>Hembra</sexo>
+			<raza>siames</raza>
+			     <edad>1</edad>
+			<foto>g2.jpg</foto>
+			<cartilla_sanitaria>
+                <consulta cod_consulta="g2_c01" fecha="2019-02-19">
+                    <descripcion>Desparasitación.</descripcion>
+                    <veterinario colegiado ="V1">
+                        <nombre>Enrique López</nombre>
+                    </veterinario>
+                    <importe moneda="€">50</importe>
+                </consulta>
+                
+            </cartilla_sanitaria>
+		</gato>
+    </categoria>
+</mascotas>
+</protectora>

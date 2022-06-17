@@ -1,0 +1,31 @@
+<!ELEMENT protectora (nombre, direccion, mascotas)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT mascotas (categoria+)>
+<!ELEMENT categoria (gato*, perro+)>
+<!ATTLIST categoria
+          nombre CDATA #REQUIRED>
+<!ELEMENT perro (nombre | sexo | foto | raza | edad | cartilla_sanitaria)+>
+<!ATTLIST perro
+          fecha_llegada CDATA #REQUIRED
+          id CDATA #REQUIRED>
+<!ELEMENT sexo (#PCDATA)>
+<!ELEMENT foto (#PCDATA)>
+<!ELEMENT raza (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT cartilla_sanitaria (consulta+)>
+<!ELEMENT consulta (descripcion, veterinario, importe)>
+<!ATTLIST consulta
+          cod_consulta CDATA #REQUIRED
+          fecha CDATA #REQUIRED>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT veterinario (nombre)>
+<!ATTLIST veterinario
+          colegiado CDATA #REQUIRED>
+<!ELEMENT importe (#PCDATA)>
+<!ATTLIST importe
+          moneda CDATA #REQUIRED>
+<!ELEMENT gato (nombre, sexo, raza, edad, foto, cartilla_sanitaria)>
+<!ATTLIST gato
+          fecha_llegada CDATA #REQUIRED
+          id CDATA #REQUIRED>
